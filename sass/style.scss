@@ -1,11 +1,18 @@
-$bgcolor: #567762;
+// 変数　恥ずかしいコメント
+$bgcolor: #567762; //コメント
+$breakpoint: 800px;
 
+@import '_parts.scss';
+
+/* 通常コメント */
 h1 {
+  $xyz: black;
+
   background-color: $bgcolor;
   color: #555;
 
   strong {
-    color: red;
+    color: orange;
   }
 
   +p {
@@ -26,5 +33,9 @@ h1 {
     &:hover {
       color: yellow;
     }
+  }
+
+  @media (max-width: ($breakpoint - 1px)) {
+    font-size: .8rem;
   }
 }
