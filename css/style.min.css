@@ -8,6 +8,11 @@ h1 {
   background-color: #567762;
   color: #555;
 }
+@media (min-width: 800px) {
+  h1 {
+    background-color: gainsboro;
+  }
+}
 h1 strong {
   color: orange;
 }
@@ -45,4 +50,14 @@ h3 {
   margin-top: 0;
   line-height: 1.2;
   font-size: 1rem;
+}
+
+.header .global-nav__list {
+  background-color: aquamarine;
+}
+.header body.is-nav-open .global-nav__list {
+  background-color: orangered;
+}
+body.is-nav-open .global-nav__list {
+  background-color: orangered;
 }/*# sourceMappingURL=style.min.css.map */

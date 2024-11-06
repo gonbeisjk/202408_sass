@@ -8,12 +8,22 @@
 // @use '_variable.scss' as *; // 変数名
 @use 'variable' as *; // 変数名
 
+@mixin mediaquery {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
 /* 通常コメント */
 h1 {
   $xyz: black;
 
   background-color: $bgcolor;
   color: #555;
+
+  @include mediaquery {
+    background-color: gainsboro;
+  }
 
   strong {
     color: orange;
@@ -58,4 +68,20 @@ h2 {
 
 h3 {
   @include heading;
+}
+
+.header {
+
+  .global-nav__list {
+    background-color: aquamarine;
+  }
+
+  body.is-nav-open .global-nav__list {
+    background-color: orangered;
+  }
+
+  @at-root body.is-nav-open .global-nav__list {
+    background-color: orangered;
+  }
+
 }
