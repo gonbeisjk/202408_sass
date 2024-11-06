@@ -1,8 +1,12 @@
-// 変数　恥ずかしいコメント
-$bgcolor: #567762; //コメント
-$breakpoint: 800px;
+// @importは廃止予定
+// @import '_parts.scss';
 
-@import '_parts.scss';
+// 代替 @use, @forward
+@forward '_parts.scss';
+// @use '_variable.scss'; // variable.変数名
+// @use '_variable.scss' as v; // v.変数名
+// @use '_variable.scss' as *; // 変数名
+@use 'variable' as *; // 変数名
 
 /* 通常コメント */
 h1 {
@@ -38,4 +42,20 @@ h1 {
   @media (max-width: ($breakpoint - 1px)) {
     font-size: .8rem;
   }
+}
+
+@mixin heading($size: 1rem) {
+  margin-bottom: 1em;
+  margin-top: 0;
+  line-height: 1.2;
+  font-size: $size;
+}
+
+h2 {
+  @include heading(2rem);
+  background: #fac;
+}
+
+h3 {
+  @include heading;
 }
