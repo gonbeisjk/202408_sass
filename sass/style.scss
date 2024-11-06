@@ -1,0 +1,30 @@
+$bgcolor: #567762;
+
+h1 {
+  background-color: $bgcolor;
+  color: #555;
+
+  strong {
+    color: red;
+  }
+
+  +p {
+    color: orange;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
+}
+
+
+.text {
+  a {
+    color: green;
+
+    // & = .text a
+    &:hover {
+      color: yellow;
+    }
+  }
+}

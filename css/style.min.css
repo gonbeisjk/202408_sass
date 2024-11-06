@@ -1,0 +1,22 @@
+h1 {
+  background-color: #567762;
+  color: #555;
+}
+h1 strong {
+  color: red;
+}
+h1 + p {
+  color: orange;
+}
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.text a {
+  color: green;
+}
+.text a:hover {
+  color: yellow;
+}/*# sourceMappingURL=style.min.css.map */
