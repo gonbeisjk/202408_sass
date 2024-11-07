@@ -111,3 +111,55 @@ $value: 20;
 
   $value: $value - 10;
 }
+
+$nameList: top, about, company, contact;
+
+@each $name in $nameList {
+  .body-#{$name} {
+    background-image: url(../img/bg_#{$name}.jpg);
+  }
+}
+
+$color: #2322ac;
+
+.color {
+  background-color: rgba($color, .8);
+}
+
+@for $opacity from 0 through 10 {
+  @warn $opacity;
+
+  .gray-#{$opacity} {
+    background-color: lighten(#000, $opacity * 10%);
+  }
+}
+
+$colors: red, green, blue;
+
+.sample-bg {
+  background-color: nth($colors, 2);
+}
+
+$snsColors: (
+  twitter: #1b95e0,
+  facebook: #3b5998,
+);
+
+.sns-twitter {
+  color: map-get($snsColors, twitter);
+}
+
+@mixin iconfont($code) {
+  content: unquote('"\\#{$code}"');
+  font-family: remixicon;
+}
+
+h2 {
+  &::before {
+    @include iconfont(F335);
+  }
+}
+
+.item {
+  width: calc(100% - 1px * 2);
+}

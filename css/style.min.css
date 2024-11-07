@@ -80,4 +80,85 @@ body.is-nav-open .global-nav__list {
 
 .mt_10 {
   margin-top: 10px;
+}
+
+.body-top {
+  background-image: url(../img/bg_top.jpg);
+}
+
+.body-about {
+  background-image: url(../img/bg_about.jpg);
+}
+
+.body-company {
+  background-image: url(../img/bg_company.jpg);
+}
+
+.body-contact {
+  background-image: url(../img/bg_contact.jpg);
+}
+
+.color {
+  background-color: rgba(35, 34, 172, 0.8);
+}
+
+.gray-0 {
+  background-color: black;
+}
+
+.gray-1 {
+  background-color: #1a1a1a;
+}
+
+.gray-2 {
+  background-color: #333333;
+}
+
+.gray-3 {
+  background-color: #4d4d4d;
+}
+
+.gray-4 {
+  background-color: #666666;
+}
+
+.gray-5 {
+  background-color: gray;
+}
+
+.gray-6 {
+  background-color: #999999;
+}
+
+.gray-7 {
+  background-color: #b3b3b3;
+}
+
+.gray-8 {
+  background-color: #cccccc;
+}
+
+.gray-9 {
+  background-color: #e6e6e6;
+}
+
+.gray-10 {
+  background-color: white;
+}
+
+.sample-bg {
+  background-color: green;
+}
+
+.sns-twitter {
+  color: #1b95e0;
+}
+
+h2::before {
+  content: "\F335";
+  font-family: remixicon;
+}
+
+.item {
+  width: calc(100% - 2px);
 }/*# sourceMappingURL=style.min.css.map */
