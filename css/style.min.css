@@ -60,4 +60,24 @@ h3 {
 }
 body.is-nav-open .global-nav__list {
   background-color: orangered;
+}
+
+.sample_1 {
+  margin-bottom: 1px;
+}
+
+.sample_2 {
+  margin-bottom: 2px;
+}
+
+.sample_3 {
+  margin-bottom: 3px;
+}
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.mt_10 {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.min.css.map */

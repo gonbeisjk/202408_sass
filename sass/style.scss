@@ -8,9 +8,19 @@
 // @use '_variable.scss' as *; // 変数名
 @use 'variable' as *; // 変数名
 
-@mixin mediaquery {
-  @media (min-width: $breakpoint) {
-    @content;
+// メディアクエリミックスイン
+// $size: sm(~799px), lg(800px~)
+@mixin mediaquery($size) {
+  @if $size ==sm {
+    @media (max-width: ($breakpoint - 1px)) {
+      @content;
+    }
+  }
+
+  @if $size ==lg {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
   }
 }
 
@@ -21,7 +31,7 @@ h1 {
   background-color: $bgcolor;
   color: #555;
 
-  @include mediaquery {
+  @include mediaquery(lg) {
     background-color: gainsboro;
   }
 
@@ -84,4 +94,20 @@ h3 {
     background-color: orangered;
   }
 
+}
+
+@for $value from 1 through 3 {
+  .sample_#{$value} {
+    margin-bottom: 1px * $value;
+  }
+}
+
+$value: 20;
+
+@while $value >0 {
+  .mt_#{$value} {
+    margin-top: #{$value}px;
+  }
+
+  $value: $value - 10;
 }
